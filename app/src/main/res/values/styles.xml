@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MainTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/raleway</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Large_title" parent="MainTextStyle">
+        <item name="fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="Title" parent="MainTextStyle">
+        <item name="fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Header" parent="MainTextStyle">
+        <item name="fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="BodySemibold" parent="MainTextStyle">
+        <item name="fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="BodyRegular" parent="MainTextStyle">
+        <item name="fontFamily">@font/raleway</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Button" parent="MainTextStyle">
+        <item name="fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Caption1" parent="MainTextStyle">
+        <item name="fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Caption2" parent="MainTextStyle">
+        <item name="fontFamily">@font/raleway_medium</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="HorizontalProgressBarStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">6dp</item>
+        <item name="android:max">100</item>
+    </style>
+
+</resources>
