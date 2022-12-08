@@ -4,4 +4,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="trending_videos">Trending videos</string>
+    <string name="share_app">Share app</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="settings">Settings</string>
+    <string name="rate_app">Rate app</string>
+    <string name="feedback_amp_report"><![CDATA[Feedback & report]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
 </resources>

@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_main__nav_host_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -37,13 +42,5 @@
         app:backgroundTint="@color/primary"
         app:layout_anchor="@id/bottomAppBar"
         app:tint="@color/white" />
-
-    <fragment
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/bottom_navigation_graph" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

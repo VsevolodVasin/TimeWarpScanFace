@@ -1,4 +1,4 @@
-package com.example.timewarpscan.ui
+package com.example.timewarpscan.ui.explore
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
