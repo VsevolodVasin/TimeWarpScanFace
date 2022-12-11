@@ -2,9 +2,9 @@
 <resources>
 
     <style name="MainTextStyle">
-        <item name="android:textColor">@color/black</item>
         <item name="fontFamily">@font/raleway</item>
         <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/text_90_percents</item>
     </style>
 
     <style name="Large_title" parent="MainTextStyle">
@@ -51,6 +51,18 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">6dp</item>
         <item name="android:max">100</item>
+    </style>
+    
+    <style name="DialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+
+    <style name="LevelButton">
+        <item name="fontFamily">@font/creepster</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:background">@drawable/level_button</item>
+        <item name="android:textColor">@color/text_90_percents</item>
     </style>
 
 </resources>

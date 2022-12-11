@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation_graph.xml"
+    app:startDestination="@id/navigation_trending">
+
+    <fragment
+        android:id="@+id/navigation_trending"
+        android:name="com.example.timewarpscan.ui.trending.TrendingFragment"
+        android:label="fragment_trending"
+        tools:layout="@layout/fragment_trending" >
+        <action
+            android:id="@+id/action_navigation_trending_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_explore"
+        android:name="com.example.timewarpscan.ui.explore.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_navigation_explore_to_navigation_trending"
+            app:destination="@id/navigation_trending" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_game"
+        android:name="com.example.timewarpscan.ui.game.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_navigation_game_to_levelsFragment"
+            app:destination="@id/levelsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_gallery"
+        android:name="com.example.timewarpscan.ui.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_navigation_gallery_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/makePhotoAndVideoFragment"
+        android:name="com.example.timewarpscan.ui.make_photo_and_video.MakePhotoAndVideoFragment"
+        android:label="fragment_make_photo_and_video"
+        tools:layout="@layout/fragment_make_photo_and_video" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.timewarpscan.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/levelsFragment"
+        android:name="com.example.timewarpscan.ui.game.LevelsFragment"
+        android:label="fragment_levels"
+        tools:layout="@layout/fragment_levels" />
+</navigation>

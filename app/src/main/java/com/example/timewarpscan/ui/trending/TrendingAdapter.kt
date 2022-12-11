@@ -1,7 +1,5 @@
-package com.example.timewarpscan.adapters
+package com.example.timewarpscan.ui.trending
 
-import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,24 +10,23 @@ import com.squareup.picasso.Transformation
 
 
 class TrendingAdapter(
-    private val itemsList: MutableList<Pair<Int, String>>,
+    private val itemsList: MutableList<TrendingItem>,
     private val onClickListener: OnClickListener,
 ): RecyclerView.Adapter<TrendingAdapter.TrendingViewHolder>(){
 
     inner class TrendingViewHolder(private val binding: PhotoAndVideoItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        // first - unique id, second - url for preview
-        fun bind(item: Pair<Int, String>, onClickListener: OnClickListener) {
+        fun bind(item: TrendingItem, onClickListener: OnClickListener) {
             binding.apply {
                 val transformation: Transformation = RoundedTransformationBuilder()
                     .cornerRadiusDp(16f)
                     .oval(false)
                     .build()
                 Picasso.get()
-                    .load(item.second)
+                    .load(item.previewUrl)
                     .fit()
                     .transform(transformation)
                     .into(imageView)
-                root.setOnClickListener { onClickListener.onClick(item.first) }
+                root.setOnClickListener { onClickListener.onClick(item.id) }
             }
         }
 

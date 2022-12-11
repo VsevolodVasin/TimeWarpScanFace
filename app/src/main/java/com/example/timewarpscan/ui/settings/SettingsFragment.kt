@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
-import com.example.timewarpscan.R
+import androidx.navigation.fragment.findNavController
+import com.example.timewarpscan.core.helpers.NavigationHelper
 import com.example.timewarpscan.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -25,10 +25,8 @@ class SettingsFragment : Fragment() {
         binding.backButton.setOnClickListener { goBack() }
 
     private fun goBack() {
-        Navigation.findNavController(
-            requireActivity(),
-            R.id.activity_root__fragment__nav_host
-        ).popBackStack()
+        findNavController().popBackStack()
+        (requireActivity() as NavigationHelper).showBottomAppBar()
     }
 
 }

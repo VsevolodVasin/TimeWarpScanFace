@@ -10,4 +10,16 @@
     <string name="rate_app">Rate app</string>
     <string name="feedback_amp_report"><![CDATA[Feedback & report]]></string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="explore">Explore</string>
+    <string name="gallery">Gallery</string>
+    <string name="game">Game</string>
+    <string name="this_feature_will_be_update_on_the_next_version">This feature will be update on the next version.</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="open_trending">Open trending</string>
+    <string name="confirm_discard">Confirm discard</string>
+    <string name="discard_main_text">Are you sure you want to exit? Your image/video will not be save.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="exit_popup_main_text">Are you sure you want to exit? Your image/video will not be save.</string>
+    <string name="exit_popup_header">Do you want to exit app?</string>
 </resources>

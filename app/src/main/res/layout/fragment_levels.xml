@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/game_blue_bg"
+    tools:context=".ui.game.LevelsFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/road"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/level_line" />
+
+            <ImageView
+                android:id="@+id/pngLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20dp"
+                android:paddingBottom="100dp"
+                android:src="@drawable/levels_png_layer" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button9"
+                style="@style/LevelButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@+id/road"
+                android:layout_centerHorizontal="true"
+                android:text="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button10"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button9"
+                android:layout_alignStart="@+id/button9"
+                android:layout_alignEnd="@+id/button9"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="-50dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button11"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button10"
+                android:layout_alignStart="@+id/button10"
+                android:layout_alignEnd="@+id/button10"
+                android:layout_marginStart="-120dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button12"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button11"
+                android:layout_alignStart="@+id/button11"
+                android:layout_alignEnd="@+id/button11"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="-120dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button13"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button12"
+                android:layout_alignStart="@+id/button12"
+                android:layout_alignEnd="@+id/button12"
+                android:layout_marginStart="-120dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button14"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button13"
+                android:layout_alignStart="@+id/button13"
+                android:layout_alignEnd="@+id/button13"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="-120dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="6" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button15"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button14"
+                android:layout_alignStart="@+id/button14"
+                android:layout_alignEnd="@+id/button14"
+                android:layout_marginStart="-120dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button16"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button15"
+                android:layout_alignStart="@+id/button15"
+                android:layout_alignEnd="@+id/button15"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="-120dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button17"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button16"
+                android:layout_alignStart="@+id/button16"
+                android:layout_alignEnd="@+id/button16"
+                android:layout_marginStart="-120dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button18"
+                style="@style/LevelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button17"
+                android:layout_alignStart="@+id/button17"
+                android:layout_alignEnd="@+id/button17"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="-120dp"
+                android:layout_marginBottom="60dp"
+                android:enabled="false"
+                android:text="10" />
+
+            <ImageView
+                android:id="@+id/finishButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button18"
+                android:layout_alignStart="@+id/button18"
+                android:layout_alignEnd="@+id/button18"
+                android:layout_marginStart="-120dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="60dp"
+                android:src="@drawable/crystal" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitEnd"
+        android:src="@drawable/sand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play_level_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

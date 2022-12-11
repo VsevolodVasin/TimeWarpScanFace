@@ -4,16 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.GameFragment">
+    android:background="@color/game_blue_bg"
+    tools:context=".ui.game.GameFragment">
 
-    <TextView
-        style="@style/Title"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/game"
+        app:layout_constraintBottom_toTopOf="@+id/playGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Game"
+        android:layout_marginBottom="94dp"
+        android:background="@drawable/play_game_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

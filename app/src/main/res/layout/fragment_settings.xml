@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/textView3"
-        style="@style/Title"
+        style="@style/Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

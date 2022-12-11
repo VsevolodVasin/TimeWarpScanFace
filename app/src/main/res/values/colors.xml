@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="text_on_primary">#E6FFFFFF</color>
+    <color name="text_90_percents_on_primary">#E6FFFFFF</color>
     <color name="text_90_percents">#E6000000</color>
     <color name="text_50_percents">#80000000</color>
     <color name="primary">#FF5722</color>
@@ -17,4 +17,5 @@
     <color name="gray">#888888</color>
     <color name="black_30_percents">#4D121212</color>
     <color name="status_bar_color">#33000000</color>
+    <color name="game_blue_bg">#0BA7FF</color>
 </resources>
