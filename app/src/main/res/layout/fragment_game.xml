@@ -7,16 +7,23 @@
     android:background="@color/game_blue_bg"
     tools:context=".ui.game.GameFragment">
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="11dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/game"
         app:layout_constraintBottom_toTopOf="@+id/playGameButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="11dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/game" />
+    </RelativeLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/playGameButton"

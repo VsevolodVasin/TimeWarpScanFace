@@ -9,23 +9,26 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:paddingBottom="125dp">
 
             <ImageView
                 android:id="@+id/road"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:paddingTop="40dp"
                 android:src="@drawable/level_line" />
 
             <ImageView
@@ -36,6 +39,18 @@
                 android:layout_marginEnd="20dp"
                 android:paddingBottom="100dp"
                 android:src="@drawable/levels_png_layer" />
+
+            <ImageView
+                android:id="@+id/finishButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button18"
+                android:layout_alignStart="@+id/button18"
+                android:layout_alignEnd="@+id/button18"
+                android:layout_marginStart="-120dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="60dp"
+                android:src="@drawable/crystal" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button9"
@@ -172,18 +187,6 @@
                 android:enabled="false"
                 android:text="10" />
 
-            <ImageView
-                android:id="@+id/finishButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/button18"
-                android:layout_alignStart="@+id/button18"
-                android:layout_alignEnd="@+id/button18"
-                android:layout_marginStart="-120dp"
-                android:layout_marginEnd="120dp"
-                android:layout_marginBottom="60dp"
-                android:src="@drawable/crystal" />
-
         </RelativeLayout>
     </ScrollView>
 
@@ -191,21 +194,44 @@
         android:id="@+id/imageView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitEnd"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
         android:src="@drawable/sand"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/goBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/game_go_back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/play_level_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintBottom_toBottomOf="@id/imageView7"
+        app:layout_constraintEnd_toEndOf="@id/imageView7"
         app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
