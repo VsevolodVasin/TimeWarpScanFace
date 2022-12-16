@@ -24,7 +24,10 @@ class MainActivity : AppCompatActivity(), NavigationHelper {
         navController = this.findNavController(R.id.nav_host_fragment)
         binding.bottomNavView.setupWithNavController(navController)
         binding.fab.setOnClickListener {
+            Log.i("TAG", "onCreate: FAB CLICK")
             hideBottomAppBar()
+//            navController.navigate(R.id.action_navigation_trending_to_makePhotoAndVideoFragment)
+//            startActivity(Intent(this, MakePhotoAndVideoActivity::class.java))
             navController.navigate(R.id.makePhotoAndVideoFragment)
         }
     }
@@ -33,8 +36,6 @@ class MainActivity : AppCompatActivity(), NavigationHelper {
         binding.apply {
             fab.visibility = View.VISIBLE
             bottomAppBar.visibility = View.VISIBLE
-//            bottomAppBar.fabCradleMargin = 80f
-//            bottomAppBar.fabCradleRoundedCornerRadius = 0f
             Log.i("TAG", "showBottomAppBar: ")
         }
     }

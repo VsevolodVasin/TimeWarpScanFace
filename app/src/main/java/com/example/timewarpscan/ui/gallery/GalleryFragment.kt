@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.timewarpscan.R
 import com.example.timewarpscan.core.helpers.NavigationHelper
+import com.example.timewarpscan.core.helpers.SpaceItemDecoration
 import com.example.timewarpscan.databinding.FragmentGalleryBinding
 
 class GalleryFragment : Fragment() {
@@ -102,8 +103,15 @@ class GalleryFragment : Fragment() {
 
         val galleryLayoutManager = GridLayoutManager(activity, spanCount)
         val galleryAdapter = GalleryAdapter(galleryItemsList, galleryItemListener)
+        val countInLastLine = if (galleryItemsList.size % 2 == 1) 1 else 2
+        val spaceItemDecoration: SpaceItemDecoration = if (countInLastLine == 1) {
+            SpaceItemDecoration(listOf(galleryItemsList.size - 1))
+        } else {
+            SpaceItemDecoration(listOf(galleryItemsList.size - 1, galleryItemsList.size - 2))
+        }
 
         binding.apply {
+            galleryRecyclerView.addItemDecoration(spaceItemDecoration)
             galleryRecyclerView.layoutManager = galleryLayoutManager
             galleryRecyclerView.adapter = galleryAdapter
             settingsButton.setOnClickListener {

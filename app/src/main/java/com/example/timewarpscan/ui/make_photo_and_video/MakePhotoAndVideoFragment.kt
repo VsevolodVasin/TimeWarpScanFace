@@ -25,7 +25,7 @@ class MakePhotoAndVideoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         requireActivity().onBackPressedDispatcher.addCallback(this) {
-            Log.i("TAG", "onViewCreated: afasdf")
+            Log.i("TAG", "onBackPressedDispatcher")
             goBack() }
     }
 

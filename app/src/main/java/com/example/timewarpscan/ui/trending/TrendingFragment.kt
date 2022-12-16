@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.timewarpscan.R
 import com.example.timewarpscan.core.helpers.NavigationHelper
+import com.example.timewarpscan.core.helpers.SpaceItemDecoration
 import com.example.timewarpscan.databinding.FragmentTrendingBinding
 
 
@@ -47,6 +48,8 @@ class TrendingFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+//        (requireActivity() as NavigationHelper).showBottomAppBar()
 
         val trendingList: MutableList<TrendingItem> = ArrayList()
         trendingList.add(
@@ -111,8 +114,15 @@ class TrendingFragment : Fragment() {
 
         val trendingLayoutManager = GridLayoutManager(activity, spanCount)
         val trendingAdapter = TrendingAdapter(trendingList, trendingItemListener)
+        val countInLastLine = if (trendingList.size % 2 == 1) 1 else 2
+        val spaceItemDecoration: SpaceItemDecoration = if (countInLastLine == 1) {
+            SpaceItemDecoration(listOf(trendingList.size - 1))
+        } else {
+            SpaceItemDecoration(listOf(trendingList.size - 1, trendingList.size - 2))
+        }
 
         binding.apply {
+            trendingRecyclerView.addItemDecoration(spaceItemDecoration)
             trendingRecyclerView.layoutManager = trendingLayoutManager
             trendingRecyclerView.adapter = trendingAdapter
             settingsButton.setOnClickListener {
