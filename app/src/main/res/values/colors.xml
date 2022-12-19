@@ -23,4 +23,5 @@
     <color name="gradient_text_second_color">#FFFFFF</color>
     <color name="gradient_text_third_color">#FED335</color>
     <color name="transparent_60_percents">#99000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

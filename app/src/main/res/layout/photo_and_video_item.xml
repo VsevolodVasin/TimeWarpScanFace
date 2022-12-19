@@ -7,7 +7,7 @@
     android:layout_margin="8dp"
     android:elevation="0dp">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -16,10 +16,11 @@
             android:scaleType="centerCrop"
             android:src="@drawable/video"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="w,156:252"
+            app:layout_constraintDimensionRatio="w,9:16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/playCircleImageView"
@@ -29,6 +30,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView"
-            app:srcCompat="@drawable/play_circle" />
+            app:srcCompat="@drawable/play_circle"
+            tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

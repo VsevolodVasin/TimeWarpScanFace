@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_trending"
-        android:name="com.example.timewarpscan.ui.trending.TrendingFragment"
+        android:name="com.example.timewarpscan.ui.screens.trending.TrendingFragment"
         android:label="fragment_trending"
         tools:layout="@layout/fragment_trending" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_explore"
-        android:name="com.example.timewarpscan.ui.explore.ExploreFragment"
+        android:name="com.example.timewarpscan.ui.screens.explore.ExploreFragment"
         android:label="fragment_explore"
         tools:layout="@layout/fragment_explore" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_game"
-        android:name="com.example.timewarpscan.ui.game.GameFragment"
+        android:name="com.example.timewarpscan.ui.screens.game.GameFragment"
         android:label="fragment_game"
         tools:layout="@layout/fragment_game" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_gallery"
-        android:name="com.example.timewarpscan.ui.gallery.GalleryFragment"
+        android:name="com.example.timewarpscan.ui.screens.gallery.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery" >
         <action
@@ -43,17 +43,17 @@
     </fragment>
     <fragment
         android:id="@+id/makePhotoAndVideoFragment"
-        android:name="com.example.timewarpscan.ui.make_photo_and_video.MakePhotoAndVideoFragment"
+        android:name="com.example.timewarpscan.ui.screens.make_photo_and_video.MakePhotoAndVideoFragment"
         android:label="fragment_make_photo_and_video"
         tools:layout="@layout/fragment_make_photo_and_video" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.timewarpscan.ui.settings.SettingsFragment"
+        android:name="com.example.timewarpscan.ui.screens.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/levelsFragment"
-        android:name="com.example.timewarpscan.ui.game.LevelsFragment"
+        android:name="com.example.timewarpscan.ui.screens.game.LevelsFragment"
         android:label="fragment_levels"
         tools:layout="@layout/fragment_levels" />
 </navigation>

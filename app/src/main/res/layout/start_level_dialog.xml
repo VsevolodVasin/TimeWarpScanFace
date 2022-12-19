@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/level_popup_bg"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <com.example.timewarpscan.ui.views.GradientTextView
+        android:id="@+id/popupLevelNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/creepster"
+        android:letterSpacing="0.019"
+        android:text="Level 1"
+        android:textColor="#000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_bg"
+        app:layout_constraintStart_toStartOf="@+id/dialog_bg"
+        app:layout_constraintTop_toTopOf="@+id/dialog_bg"
+        tools:ignore="HardcodedText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/playLevelButton"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_bg"
+        app:layout_constraintStart_toStartOf="@+id/dialog_bg"
+        app:layout_constraintTop_toBottomOf="@+id/popupLevelNumber">
+
+        <TextView
+            android:id="@+id/popupLevelTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="A long forehead"
+            android:textAppearance="@style/Header"
+            android:textColor="@color/brown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/popupLevelImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/preview_1"
+            app:layout_constraintBottom_toTopOf="@+id/popupLevelCaption"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popupLevelTitle"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/popupLevelCaption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/move_your_face_down_to_make_a_long_forehead"
+            android:textAppearance="@style/Caption1"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/popupCloseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/close_level_popup_button"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_bg"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_bg"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/dialog_bg"
+        app:layout_constraintTop_toTopOf="@+id/dialog_bg"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playLevelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/play_game_button"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_bg"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_bg"
+        app:layout_constraintStart_toStartOf="@+id/dialog_bg"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

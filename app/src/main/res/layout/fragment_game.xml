@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/game_blue_bg"
-    tools:context=".ui.game.GameFragment">
+    tools:context=".ui.screens.game.GameFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +22,8 @@
             android:layout_marginBottom="11dp"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:src="@drawable/game" />
+            android:src="@drawable/game"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
     </RelativeLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -33,6 +34,7 @@
         android:background="@drawable/play_game_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

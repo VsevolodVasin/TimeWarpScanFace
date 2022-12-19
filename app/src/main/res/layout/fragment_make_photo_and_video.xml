@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.make_photo_and_video.MakePhotoAndVideoFragment">
+    tools:context=".ui.screens.make_photo_and_video.MakePhotoAndVideoFragment">
 
     <TextView
         style="@style/Header"

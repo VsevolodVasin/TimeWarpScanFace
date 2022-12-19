@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/game_blue_bg"
-    tools:context=".ui.game.LevelsFragment">
+    tools:context=".ui.screens.game.LevelsFragment">
 
     <ScrollView
         android:id="@+id/levelsScrollView"
@@ -31,7 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="40dp"
-                android:src="@drawable/level_line" />
+                android:src="@drawable/level_line"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
 
             <ImageView
                 android:id="@+id/pngLayer"
@@ -42,7 +43,8 @@
                 android:layout_alignBottom="@id/road"
                 android:layout_marginEnd="20dp"
                 android:scaleType="center"
-                android:src="@drawable/levels_png_layer" />
+                android:src="@drawable/levels_png_layer"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
 
             <ImageView
                 android:id="@+id/finishButton"
@@ -54,7 +56,8 @@
                 android:layout_marginStart="-120dp"
                 android:layout_marginEnd="120dp"
                 android:layout_marginBottom="60dp"
-                android:src="@drawable/crystal" />
+                android:src="@drawable/crystal"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_1_button"
@@ -63,7 +66,8 @@
                 android:layout_height="80dp"
                 android:layout_alignBottom="@+id/road"
                 android:layout_centerHorizontal="true"
-                android:text="1" />
+                android:text="1"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_2_button"
@@ -77,7 +81,8 @@
                 android:layout_marginEnd="-50dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="2" />
+                android:text="2"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_3_button"
@@ -91,7 +96,8 @@
                 android:layout_marginEnd="120dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="3" />
+                android:text="3"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_4_button"
@@ -105,7 +111,8 @@
                 android:layout_marginEnd="-120dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="4" />
+                android:text="4"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_5_button"
@@ -119,7 +126,8 @@
                 android:layout_marginEnd="120dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="5" />
+                android:text="5"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_6_button"
@@ -133,7 +141,8 @@
                 android:layout_marginEnd="-120dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="6" />
+                android:text="6"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_7_button"
@@ -147,7 +156,8 @@
                 android:layout_marginEnd="120dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="7" />
+                android:text="7"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_8_button"
@@ -161,7 +171,8 @@
                 android:layout_marginEnd="-120dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="8" />
+                android:text="8"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_9_button"
@@ -175,7 +186,8 @@
                 android:layout_marginEnd="120dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="9" />
+                android:text="9"
+                tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/level_10_button"
@@ -189,7 +201,8 @@
                 android:layout_marginEnd="-120dp"
                 android:layout_marginBottom="60dp"
                 android:enabled="false"
-                android:text="10" />
+                android:text="10"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
     </ScrollView>
@@ -204,7 +217,8 @@
         android:src="@drawable/sand"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -214,7 +228,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/goBackButton"
@@ -226,7 +241,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -236,116 +252,7 @@
         app:layout_constraintBottom_toBottomOf="@id/imageView7"
         app:layout_constraintEnd_toEndOf="@id/imageView7"
         app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="@+id/imageView7" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/startLevelPopupLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/transparent_60_percents"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/level_popup_bg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.example.timewarpscan.ui.GradientTextView
-            android:id="@+id/popupLevelNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/creepster"
-            android:letterSpacing="0.019"
-            android:text="Level 1"
-            android:textColor="#000"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toTopOf="@+id/imageView6" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="70dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-            app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/popupLevelNumber"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
-                android:id="@+id/popupLevelTitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="A long forehead"
-                android:textAppearance="@style/Header"
-                android:textColor="@color/brown"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/levelMainImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/forehead"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/popupLevelTitle" />
-
-            <TextView
-                android:id="@+id/popupLevelCaption"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:text="Move youe face down to make a long forehead"
-                android:textAppearance="@style/Caption1"
-                android:textColor="@color/brown"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/levelMainImage" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/popupCloseButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/close_level_popup_button"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-            app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toTopOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/playLevelButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/play_game_button"
-            app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
