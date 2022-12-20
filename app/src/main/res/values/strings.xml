@@ -23,4 +23,8 @@
     <string name="exit_popup_main_text">Are you sure you want to exit? Your image/video will not be save.</string>
     <string name="exit_popup_header">Do you want to exit app?</string>
     <string name="move_your_face_down_to_make_a_long_forehead">Move your face down to make a long forehead</string>
+    <string name="photo">Photo</string>
+    <string name="share">Share</string>
+    <string name="share_fragment_main_text">Your image/video was saved successfully.\nShare with your friend now.</string>
+    <string name="scan_more">Scan more</string>
 </resources>

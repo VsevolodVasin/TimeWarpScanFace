@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.ScrollView
 import android.widget.TextView
@@ -18,6 +19,7 @@ import com.example.timewarpscan.databinding.FragmentLevelsBinding
 class LevelsFragment : Fragment() {
 
     lateinit var binding: FragmentLevelsBinding
+    private val ARG_LEVEL_ID = "levelId"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,7 +51,7 @@ class LevelsFragment : Fragment() {
     }
 
     private fun levelClick(levelId: Int) {
-        val selectedLevel = Levels().getLevelById(levelId)
+        val selectedLevel = Levels(requireContext()).getLevelById(levelId)
         val dialog = Dialog(requireContext(), R.style.DialogStyle)
         dialog.apply {
             setContentView(R.layout.start_level_dialog)
@@ -59,6 +61,12 @@ class LevelsFragment : Fragment() {
             findViewById<TextView>(R.id.popupLevelCaption).text = selectedLevel.caption
             findViewById<ImageView>(R.id.popupLevelImage).setImageResource(selectedLevel.pictureId)
             findViewById<ImageView>(R.id.popupCloseButton).setOnClickListener { dismiss() }
+            findViewById<Button>(R.id.playLevelButton).setOnClickListener {
+                val bundle = Bundle()
+                bundle.putInt(ARG_LEVEL_ID, levelId)
+                dismiss()
+                findNavController().navigate(R.id.action_levelsFragment_to_levelFragment, bundle)
+            }
             show()
         }
     }

@@ -55,5 +55,24 @@
         android:id="@+id/levelsFragment"
         android:name="com.example.timewarpscan.ui.screens.game.LevelsFragment"
         android:label="fragment_levels"
-        tools:layout="@layout/fragment_levels" />
+        tools:layout="@layout/fragment_levels" >
+        <action
+            android:id="@+id/action_levelsFragment_to_levelFragment"
+            app:destination="@id/levelFragment" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/levelFragment"
+        android:name="com.example.timewarpscan.ui.screens.game.LevelFragment"
+        android:label="fragment_level"
+        tools:layout="@layout/fragment_level" >
+        <action
+            android:id="@+id/action_levelFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.timewarpscan.ui.screens.game.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
 </navigation>
