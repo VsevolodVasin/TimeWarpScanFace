@@ -13,6 +13,8 @@ import com.example.timewarpscan.databinding.FragmentLevelBinding
 class LevelFragment : Fragment() {
     private val ARG_LEVEL_ID = "levelId"
     private val ARG_LEVEL_VIDEO_URI_PATH = "videoUriPath"
+    private val ARG_IS_LEVEL_BLOCKED = "isLevelBlocked"
+    private var isLevelBlocked: Boolean = false
     private var levelId: Int? = null
     lateinit var binding: FragmentLevelBinding
 
@@ -20,6 +22,7 @@ class LevelFragment : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
             levelId = it.getInt(ARG_LEVEL_ID)
+            isLevelBlocked = it.getBoolean(ARG_IS_LEVEL_BLOCKED)
         }
     }
 
@@ -35,13 +38,18 @@ class LevelFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val level = Levels(requireContext()).getLevelById(levelId!!)
         binding.apply {
-            goalImageView.setImageResource(level.pictureId)
-            levelBackButton.setOnClickListener { findNavController().popBackStack() }
-            helpButton.setOnClickListener {
-                val bundle = Bundle()
-                bundle.putString(ARG_LEVEL_VIDEO_URI_PATH, level.videoUriPath)
-                findNavController().navigate(R.id.action_levelFragment_to_helpFragment, bundle)
+            if (isLevelBlocked) {
+                helpButton.visibility = View.GONE
+                goalImageView.visibility = View.GONE
+            } else {
+                goalImageView.setImageResource(level.pictureId)
+                helpButton.setOnClickListener {
+                    val bundle = Bundle()
+                    bundle.putString(ARG_LEVEL_VIDEO_URI_PATH, level.videoUriPath)
+                    findNavController().navigate(R.id.action_levelFragment_to_helpFragment, bundle)
+                }
             }
+            levelBackButton.setOnClickListener { findNavController().popBackStack() }
         }
     }
 }
