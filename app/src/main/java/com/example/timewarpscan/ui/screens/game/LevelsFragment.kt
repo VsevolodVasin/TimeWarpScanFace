@@ -12,21 +12,21 @@ import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.timewarpscan.R
 import com.example.timewarpscan.core.helpers.NavigationHelper
-import com.example.timewarpscan.data.BlockedItems
 import com.example.timewarpscan.databinding.FragmentLevelsBinding
+import com.example.timewarpscan.model.retrofit.Common
+import com.example.timewarpscan.model.retrofit.RetrofitServieces
+import com.example.timewarpscan.viewmodel.BlockedLevelsViewModel
 
 class LevelsFragment : Fragment() {
 
     lateinit var binding: FragmentLevelsBinding
-    private val ARG_LEVEL_ID = "levelId"
-    private val ARG_IS_LEVEL_BLOCKED = "isLevelBlocked"
-    val APP_PREFERENCES = "settings"
-    val APP_PREFERENCES_COMPLETED_LEVELS = "Completed level" // имя кота
-
-    private lateinit var blockedItems: List<Int>
+    private lateinit var mServieces: RetrofitServieces
+    var blockedLevelsList: MutableList<Int> = mutableListOf()
+    private lateinit var blockedLevelsViewModel: BlockedLevelsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +37,14 @@ class LevelsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        blockedLevelsViewModel = ViewModelProvider(this)[BlockedLevelsViewModel::class.java]
+        blockedLevelsViewModel.blockedLevels.observe(viewLifecycleOwner) {
+            blockedLevelsList = it
+        }
+        blockedLevelsViewModel.fetchBlockedLevelsFromApi()
+
+
         val sharedPreferences = requireActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
 
 //        val editor = sharedPreferences.edit()
@@ -45,7 +53,7 @@ class LevelsFragment : Fragment() {
 
         val completedLevel = sharedPreferences.getInt(APP_PREFERENCES_COMPLETED_LEVELS, 1)
 
-        blockedItems = BlockedItems().getBlockedItems()
+        mServieces = Common.retrofitServieces
 
         requireActivity().onBackPressedDispatcher.addCallback(this) { goBack() }
         binding.apply {
@@ -95,7 +103,7 @@ class LevelsFragment : Fragment() {
     private fun levelClick(levelId: Int) {
         val selectedLevel = Levels(requireContext()).getLevelById(levelId)
         val dialog = Dialog(requireContext(), R.style.DialogStyle)
-        val isLevelBlocked = levelId in blockedItems
+        val isLevelBlocked = levelId in blockedLevelsList
         dialog.apply {
             setContentView(R.layout.start_level_dialog)
             window?.setBackgroundDrawableResource(R.drawable.start_level_dialog_bg_inset)
@@ -122,6 +130,13 @@ class LevelsFragment : Fragment() {
     private fun goBack() {
         findNavController().popBackStack()
         (requireActivity() as NavigationHelper).showBottomAppBar()
+    }
+
+    companion object {
+        private const val ARG_LEVEL_ID = "levelId"
+        private const val ARG_IS_LEVEL_BLOCKED = "isLevelBlocked"
+        const val APP_PREFERENCES = "settings"
+        private const val APP_PREFERENCES_COMPLETED_LEVELS = "Completed level"
     }
 
 }
