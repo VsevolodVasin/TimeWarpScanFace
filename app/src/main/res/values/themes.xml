@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.TimeWarpScan" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <!-- Base application theme. -->
+    <style name="Theme.TimeWarpScanFace" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
-<!--        <item name="colorSecondary">@color/teal_200</item>-->
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
 

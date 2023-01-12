@@ -27,4 +27,7 @@
     <string name="share">Share</string>
     <string name="share_fragment_main_text">Your image/video was saved successfully.\nShare with your friend now.</string>
     <string name="scan_more">Scan more</string>
+    <string name="camera">Camera</string>
+    <string name="video">Video</string>
+    <string name="line_speed">%ss</string>
 </resources>

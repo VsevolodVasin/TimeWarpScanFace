@@ -24,4 +24,11 @@
     <color name="gradient_text_third_color">#FED335</color>
     <color name="transparent_60_percents">#99000000</color>
     <color name="transparent">#00000000</color>
+
+    <color name="lineColor">#68FBE7</color>
+    <color name="overlayColor">#99000000</color>
+    <color name="cameraOverlayColor">#4D000000</color>
+    <color name="designBlack">#121212</color>
+    <color name="text_90">#E6000000</color>
+    <color name="text_white">#E6FFFFFF</color>
 </resources>
