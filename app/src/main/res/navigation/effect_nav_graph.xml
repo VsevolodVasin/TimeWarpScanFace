@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/testFragment">
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="time.warp.scan.face.scanner.slider.game.blue.line.ui.screens.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+        <argument
+            android:name="challengeName"
+            app:argType="string" />
+        <argument
+            android:name="challengeDescription"
+            app:argType="string" />
+        <argument
+            android:name="challengeOrientation"
+            app:argType="boolean" />
+        <argument
+            android:name="challengeImage"
+            app:argType="reference" />
+        <action
+            android:id="@+id/action_cameraFragment_to_onSaveFragment"
+            app:destination="@id/onSaveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="time.warp.scan.face.scanner.slider.game.blue.line.ui.screens.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_testFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onSaveFragment"
+        android:name="time.warp.scan.face.scanner.slider.game.blue.line.ui.screens.on_save.OnSaveFragment"
+        android:label="fragment_on_save"
+        tools:layout="@layout/fragment_on_save" />
+</navigation>
