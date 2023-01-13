@@ -45,12 +45,13 @@ open class CameraFragment : Fragment() {
 
     private var effectMode = false
 
-    lateinit var overlayEffect : ImageView
-    lateinit var overlayLine : ImageView
+    private lateinit var overlayEffect : ImageView
+    private lateinit var overlayLine : ImageView
 
     lateinit var camera : CameraView
     private var effectRunning = true
     private var timer = 3
+
     // The permissions we need for the app to work properly
     private val permissions = mutableListOf(
         Manifest.permission.CAMERA,
@@ -76,10 +77,6 @@ open class CameraFragment : Fragment() {
 
     enum class WARP_DIRECTION {
         VERTICAL, HORIZONTAL
-    }
-
-    enum class CAPTURE_MODE {
-        PHOTO, VIDEO
     }
 
 
@@ -118,7 +115,7 @@ open class CameraFragment : Fragment() {
             }
         } else if (effectRunning) {
             val currentTimeMillis = System.currentTimeMillis()
-            Log.i("test", (currentTimeMillis - lastTime).toString())
+
             if (currentTimeMillis - lastTime >= frameRate) {
                 lastTime = currentTimeMillis
                 if (resultBitmap == null) {
@@ -239,14 +236,6 @@ open class CameraFragment : Fragment() {
                 }
             }
 
-            speedButton.setOnClickListener {
-                speedCard.visibility = View.VISIBLE
-                mainCard.visibility = View.GONE
-                backLayout.setOnClickListener {
-                    speedCard.visibility = View.GONE
-                    mainCard.visibility = View.VISIBLE
-                }
-            }
 
             timerButton.setOnClickListener {
                 timerCard.visibility = View.VISIBLE
@@ -333,21 +322,9 @@ open class CameraFragment : Fragment() {
                     }
                 }
 
-                CoroutineScope(Dispatchers.IO).launch {
-                    runBlocking {
-                        while(frameRate<150){
-                            frameRate = if(this@CameraFragment.effectMode){
-                                (viewModel!!.speed.value!! * 1000)  / (camera.height/lineResolution)
-                            } else {
-                                (viewModel!!.speed.value!! * 1000) / (camera.width/lineResolution)
-                            }
-                            if(frameRate<=150){
-                                lineResolution+=1
-                            }
-                        }
-                    }
-                    timer.start()
-                }
+
+                timer.start()
+
 
 
 
